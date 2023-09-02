@@ -1,0 +1,1 @@
+cmd_/home/user/Desktop/KernelProject/Module.symvers :=  scripts/mod/modpost -m -a     -o /home/user/Desktop/KernelProject/Module.symvers -T /home/user/Desktop/KernelProject/modules.order -i Module.symvers -e 

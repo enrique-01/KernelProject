@@ -1,4 +1,4 @@
-obj-m := main.o
+obj-m := main_kernel.o
 #obj-m += hello2.o
 
 all:

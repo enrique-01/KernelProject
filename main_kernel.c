@@ -8,6 +8,7 @@
 
 MODULE_LICENSE("GPL");
 
+pid_t pid;
 
 void find_process_info(void)
 {
@@ -15,18 +16,18 @@ void find_process_info(void)
 
     for_each_process(task)
     {
-
         const char *str1 = task->comm;
         const char *str2 = "firefox";
         
         if(!(strcmp(str1, str2)))
         {
-            printk(KERN_INFO "%s [%d]\n", task->comm, task->pid);
+            //printk(KERN_INFO "%s [%d]\n", task->comm, task->pid);
+            pid = task->pid;
             break;
         }
 
-
     }
+
 }
 
 static int start_process(void)
@@ -34,6 +35,9 @@ static int start_process(void)
     printk(KERN_INFO "Starting Process.\n");
 
     find_process_info();
+
+    printk(KERN_INFO "PID: %d \n", pid);
+    
     
     return 0;
 

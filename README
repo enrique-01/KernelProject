@@ -1,0 +1,21 @@
+Simple Linux Kernel module that finds a process and outputs the process memory. 
+
+main_kernel.c is currently confiure for "firefox" but any process can be put in here manually
+
+
+To Build
+---------
+Simple naviagte to the directory root and build with make
+    make
+
+To Clean
+    make clean
+
+To Load & Run Linux Kernel Module
+    insmod main_kernel.ko
+
+To unload Linux Kernel Module
+    rmmod main_kernel.ko
+
+To View Process Memory Dump use
+    dmesg or the kernel log

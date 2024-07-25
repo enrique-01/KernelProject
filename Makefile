@@ -1,5 +1,4 @@
 obj-m := main_kernel.o
-#obj-m += hello2.o
 
 all:
 	make -C /lib/modules/`uname -r`/build M=$(PWD) modules
